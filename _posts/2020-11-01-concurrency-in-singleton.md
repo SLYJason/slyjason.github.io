@@ -10,8 +10,6 @@ tags:
     - Design Pattern
 ---
 
-
-
 Making singleton thread safe is a traditional topic in concurrency programming. There has a lot of implementations here but one of the most popular is [Double-Checked Locking](https://en.wikipedia.org/wiki/Double-checked_locking#Usage_in_Java). A project bug I found recently encouraged me to review this topic again.
 
 ### Problem Statement

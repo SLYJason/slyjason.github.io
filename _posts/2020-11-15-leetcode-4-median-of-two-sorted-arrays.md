@@ -7,7 +7,6 @@ author: "Luyi"
 header-img: "img/in-post/2020-11-15-leetcode-4-median-of-two-sorted-arrays/post-bg.jpg"
 tags: 
     - LeetCode
-    - Algorithm
 ---
 
 This is a traditional [LeetCode](https://leetcode.com/problems/median-of-two-sorted-arrays/) challenge, but it has a few important things we have to dig it, so let's take a review how to solve it.
