@@ -47,7 +47,7 @@ public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 }
 ```
 
-### Case 2: LCA of Binary Search Tree
+### Case 2: LCA of General Binary Tree
 Now let's look at a more general case, what is the LCA of general binary tree. The idea is still same if using recursive approach, keep searching node `p` and `q` in the current node left subtree and right subtree:
 1. If current node is equal `p` or `q` then return the current node.
 2. If the returned LCA from both left subtree and right subtree not null, then the current node is LCA.
