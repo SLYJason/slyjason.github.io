@@ -45,7 +45,7 @@ We can say, that these segments form a binary tree: the root of this tree is the
 
 For example, given an array `[1,2,3,4,5,6]`, its segment tree is looks like:
 
-![Figure_1](/img/in-post/2020-12-27-segment-tree/Figure_1.svg).
+![Figure_1](/img/in-post/2020-12-27-segment-tree/Figure_1.svg)
 
 As you can see from the above picture, each green node (leaf node) represents a single entry of the array. So we use this data structure to `query` and `update` in **logarithmic** time manner.
 
