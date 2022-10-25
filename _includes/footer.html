@@ -282,6 +282,15 @@
             $sp.classList.remove("active");
             $kr.style.display = "block";
             $kr.classList.add("active");
+        } else { // default to english version
+            $select.selectedIndex = 1;
+            $zh.style.display = "none";
+            $zh.classList.remove("active");
+            $en.style.display = "block";
+            $en.classList.add("active");
+            $sp.style.display = "none";
+            $sp.classList.remove("active");
+            $kr.style.display = "none";
         }
         // interop with catalog
         generateCatalog(".catalog-body");
