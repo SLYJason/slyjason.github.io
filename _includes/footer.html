@@ -8,12 +8,12 @@
 
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
-<!--                    <br>-->
-<!--                    Powered by <a href="http://huangxuan.me">Hux Blog</a> |-->
-<!--                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"-->
-<!--                        height="20px"-->
-<!--                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true">-->
-<!--                    </iframe>-->
+                    <!--                    <br>-->
+                    <!--                    Powered by <a href="http://huangxuan.me">Hux Blog</a> |-->
+                    <!--                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"-->
+                    <!--                        height="20px"-->
+                    <!--                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true">-->
+                    <!--                    </iframe>-->
                     <br>
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                     <span id="busuanzi_container_site_pv">Visit Count: <span id="busuanzi_value_site_pv"></span></span>
@@ -46,8 +46,8 @@
 <script>
     function async(u, c) {
         var d = document, t = 'script',
-            o = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
+                o = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
         o.src = u;
         if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
         s.parentNode.insertBefore(o, s);
@@ -130,7 +130,7 @@
         i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
             (i[r].q = i[r].q || []).push(arguments)
         }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', _gaId, _gaDomain);
@@ -224,9 +224,11 @@
 <!-- Handle Language Change -->
 <script type="text/javascript">
     // get nodes
-    var $zh = document.querySelector(".zh");
-    var $en = document.querySelector(".en");
-    var $select = document.querySelector("select");
+    let $zh = document.querySelector(".zh");
+    let $en = document.querySelector(".en");
+    let $sp = document.querySelector(".sp");
+    let $kr = document.querySelector(".kr");
+    let $select = document.querySelector("select");
 
     // Changes at v1.8.1: include lang flag as a url query. This interop well with catalog hash anchors.
     function getLang() { return new URLSearchParams(document.location.search).get("lang") }
@@ -239,23 +241,49 @@
 
     // handle render
     function _render() {
-        var lang = getLang()
-        // en
-        if (lang == "en") {
-            $select.selectedIndex = 1;
-            $en.style.display = "block";
-            $en.classList.add("active");
-            $zh.style.display = "none";
-            $zh.classList.remove("active");
-            // default to zh-cn
-        } else {
+        const lang = getLang();
+        if (lang === "zh") {
             $select.selectedIndex = 0;
             $zh.style.display = "block";
             $zh.classList.add("active");
             $en.style.display = "none";
             $en.classList.remove("active");
+            $sp.style.display = "none";
+            $sp.classList.remove("active");
+            $kr.style.display = "none";
+            $kr.classList.remove("active");
+        } else if (lang === "en") {
+            $select.selectedIndex = 1;
+            $zh.style.display = "none";
+            $zh.classList.remove("active");
+            $en.style.display = "block";
+            $en.classList.add("active");
+            $sp.style.display = "none";
+            $sp.classList.remove("active");
+            $kr.style.display = "none";
+            $kr.classList.remove("active");
+        } else if (lang === "sp") {
+            $select.selectedIndex = 2;
+            $zh.style.display = "none";
+            $zh.classList.remove("active");
+            $en.style.display = "none";
+            $en.classList.remove("active");
+            $sp.style.display = "block";
+            $sp.classList.add("active");
+            $kr.style.display = "none";
+            $kr.classList.remove("active");
+        } else if (lang === "kr") {
+            $select.selectedIndex = 3;
+            $zh.style.display = "none";
+            $zh.classList.remove("active");
+            $en.style.display = "none";
+            $en.classList.remove("active");
+            $sp.style.display = "none";
+            $sp.classList.remove("active");
+            $kr.style.display = "block";
+            $kr.classList.add("active");
         }
-        // interop with catalog 
+        // interop with catalog
         generateCatalog(".catalog-body");
     }
 
@@ -263,8 +291,12 @@
     function onLanChange(index) {
         if (index == 0) {
             lang = "zh"
-        } else {
+        } else if (index == 1) {
             lang = "en"
+        } else if (index == 2) {
+            lang = "sp"
+        } else if (index == 3) {
+            lang = "kr"
         }
         setLang(lang)
     }

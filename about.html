@@ -20,6 +20,18 @@ multilingual: true
     {{ about_en | markdownify }}
 </div>
 
+<!-- Spanish Version -->
+<div class="sp post-container">
+    {% capture about_sp %}{% include about/sp.md %}{% endcapture %}
+    {{ about_sp | markdownify }}
+</div>
+
+<!-- Korean Version -->
+<div class="kr post-container">
+    {% capture about_kr %}{% include about/kr.md %}{% endcapture %}
+    {{ about_kr | markdownify }}
+</div>
+
 
 {% if site.disqus_username %}
 <!-- disqus 评论框 start -->

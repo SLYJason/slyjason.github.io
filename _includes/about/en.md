@@ -1,8 +1,10 @@
-自我驱动，热衷于为用户构建很棒的东西。 我喜欢在充满挑战的环境中工作，并获得作为团队成员研究和开发新软件产品的经验。 我的专长包括但不限于：
+Self-driven, passionate about building awesome stuff to users. I like to work in a challenging environment and gain experience in working as part of a team to research and develop new software products. My expertise includes but not limited to:
 
-* 精通云原生微服务的架构、设计、测试和开发。
-* 通过了解面向对象编程 (OOP)、函数式编程 (FP)、分布式系统、缓存、数据结构和算法。
-* 了解后端和前端开发、数据库、云、DevOps 最佳实践。
-* 动手软件故障排除经验。
-* 为将来的维护和升级提供适当文档的可靠跟踪记录。
-* 精通软件开发生命周期 (SDLC) 和敏捷方法。
+* Highly skilled in architecting, designing, testing and developing cloud native microservices.
+* Through understanding of Object-Oriented Programming (OOP), Functional Programming (FP), Distributed Systems, Caching, Data Structures and Algorithms.
+* Knowledge of backend and frontend development, Databases, Cloud, DevOps best practices.
+* Hands-on software troubleshooting experiences.
+* Proven track record of proper documentation for future maintenance and upgrades.
+* Well versed with Software Development Life Cycle (SDLC) and Agile methodology.
+
+This site is a personal blog website I like build on my own and share useful knowledge about computer science and software development.
